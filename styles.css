@@ -1,0 +1,64 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    background-color: #000;
+}
+
+#gameCanvas {
+    display: block;
+    background-color: #333;
+}
+
+.menu, .settings, .lobby {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.menu button, .settings button, .lobby button {
+    background-color: #444;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.menu button:hover, .settings button:hover, .lobby button:hover {
+    background-color: #555;
+}
+
+.settings, .lobby {
+    display: none;
+}
+
+.health-bar {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 200px;
+    height: 20px;
+    background-color: red;
+    display: none;
+}
+
+.power-up {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: #222;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    font-size: 0.8rem;
+}
