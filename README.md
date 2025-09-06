@@ -9,3 +9,5 @@ Players control a character that can move across a 2D canvas using the keyboard.
 - **Game State Tracking**: Real-time updates of player health, money, kills, and weapon upgrades.
 - **Power-Ups**: Collect various power-ups that enhance player abilities and provide advantages in combat.
 - **Boss Encounters**: Face off against powerful bosses after achieving specific kill milestones.
+
+Run this localy on vs code or any other code editor
