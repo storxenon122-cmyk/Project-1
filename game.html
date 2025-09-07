@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+  <meta name="description" content="A basic first-person shooter game">
+  <meta name="author" content="Your Name">
+  <meta name="keywords" content="FPS, Game, JavaScript, HTML5">
+  <title>Basic FPS Game</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<section class="menu" id="menu" style="display: block;">
+    <button id="playButton" aria-label="Start Game">Play</button>
+    <button id="multiplayerButton" aria-label="Multiplayer Mode">Multiplayer</button>
+    <button id="shopButton" aria-label="Weapon Shop">Shop</button>
+    <button id="settingsButton" aria-label="Game Settings">Settings</button>
+</section>
+
+<section class="settings" id="settings" style="display: none;">
+    <label for="playerColor" style="color: white;">Choose Player Color:</label>
+    <input type="color" id="playerColor" name="playerColor" value="#ffffff" />
+    <br />
+    <button id="backButton" aria-label="Back to Menu">Back</button>
+</section>
+
+<section class="lobby" id="lobby" style="display: none;">
+    <h2 style="color: white;">Lobby List</h2>
+    <div id="lobbyList">
+        <button>Bot Lobby 1</button>
+        <button>Bot Lobby 2</button>
+        <button>Bot Lobby 3</button>
+        <button>Bot Lobby 4</button>
+        <button>Bot Lobby 5</button>
+    </div>
+    <button id="backToMenuButton" aria-label="Back to Main Menu">Back</button>
+</section>
+
+<section class="shop" id="shop" style="display: none;">
+    <h2 style="color: white;">Weapon Shop</h2>
+    <div style="color: white; margin-bottom: 20px;">Money: $<span id="shopMoneyDisplay">1998</span></div>
+    
+    <!-- Add pagination controls -->
+    <div class="shop-navigation">
+        <button id="prevPage" aria-label="Previous Page" style="display: none;">&lt; Prev</button>
+        <span id="pageInfo" style="color: white; margin: 0 15px;">Page 1 of 1</span>
+        <button id="nextPage" aria-label="Next Page" style="display: none;">Next &gt;</button>
+    </div>
+    
+    <div id="weaponList" class="weapon-grid">
+        <!-- Weapons will be populated here -->
+    </div>
+    
+    <div style="display: flex; gap: 10px; justify-content: center;">
+        <button id="backToMenuFromShopButton" aria-label="Back to Main Menu" style="background-color: #797878; color: black; padding: 15px 30px; font-size: 1.2rem; border: none; cursor: pointer; border-radius: 5px;">Back to Menu</button>
+    </div>
+</section>
+
+<canvas id="gameCanvas" title="Game Canvas" style="display: none;"></canvas>
+<div class="health-bar" id="healthBar"></div>
+<div class="weapon-display" id="weaponDisplay" style="position: absolute; bottom: 20px; left: 220px; color: white; font-size: 1.2rem; display: none;"></div>
+<div class="money-display" id="moneyDisplay" style="position: absolute; top: 20px; right: 20px; color: white; font-size: 1.2rem; display: none;">Money: $1000</div>
+<div class="boss-notification" id="bossNotification" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: red; font-size: 3rem; font-weight: bold; display: none; text-shadow: 2px 2px 4px black;">BOSS SPAWNED!</div>
+<div class="kill-counter" id="killCounter" style="position: absolute; top: 20px; left: 20px; color: white; font-size: 1.2rem; display: none;">Kills: 0</div>
+<div class="tooltip" id="tooltip"></div>
+
+<script src="game.js"></script>
+</body>
+</html>
